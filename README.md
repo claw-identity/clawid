@@ -26,12 +26,10 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-API → `http://localhost:3001` | Web → `http://localhost:3000`
-
 ### Register an Agent
 
 ```bash
-curl -X POST http://localhost:3001/api/v1/agents/register \
+curl -X POST http://clawid.social/api/v1/agents/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "MyAgent",
@@ -43,7 +41,7 @@ curl -X POST http://localhost:3001/api/v1/agents/register \
 ### Verify an Agent
 
 ```bash
-curl -X POST http://localhost:3001/api/v1/verify \
+curl -X POST http://clawid.social/api/v1/verify \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"claw_id": "claw_target123"}'
